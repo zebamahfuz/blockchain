@@ -1,92 +1,136 @@
 <%- include partials/header.ejs %>
-<!-- form starts here-->
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputfname">First Name</label>
-      <input type="text" class="form-control" id="fname" placeholder="First Name" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputlname">Last Name</label>
-      <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputEmail4">Email</label>
-<input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone number</label>
-    <input type="tel" id="phone"  class="form-control" name="phone" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+<style>
+  /* events css */
+  @import url('https://fonts.googleapis.com/css?family=Oswald');
+  * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box
+  }
   
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="DOE">Date of Event</label>
-      <input type="date"  class="form-control" id="inputdate">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputState">Number of Tickets</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    
-  </div>
-  <div class="form-group">
-   <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-      I  accept the terms and conditions of the Event Registration.
-      </label>
-    </div> 
-  </div>
-  <button type="submit" class="btn btn-success">Book Now</button>
-</form>
-<!-- form ends here-->
+  .fl-left {
+      float: left
+  }
+  
+  .fl-right {
+      float: right
+  }
+  
+  h1 {
+      text-transform: uppercase;
+      font-weight: 900;
+      border-left: 10px solid #fec500;
+      padding-left: 10px;
+      margin-bottom: 30px
+  }
+  
+  .row {
+      overflow: hidden
+  }
+  
+ 
+</style>
 
-<div class="jumbotron">
-    <h1 class="display-4"> Welcome !</h1>
-    <p class="lead">This is our app</p>
+
+<div class="jumbotron"  style = "background-image: linear-gradient(0deg, rgba(255 255 255 / 54%), rgba(0 0 0 / 69%)), url('../images/bg.jpeg'); background-repeat: no-repeat; background-size: cover; ">
+    <h2 style ="color:#fff;">Your Event, Our Expertise: Navigate Seamless Experiences!!!</h2>
     <hr class="my-4">
     <p></p>
-    <p class="lead">
-      <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
-    </p>
+   
   </div>
 
-<div class="container">
-<table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<!--  services starts -->
+<div>
+  <section class="container pt-3 mb-3 ">
+    <h1 style ="color:#60040e;">Our Services</h1>
+    <div class="row pt-5 mt-30">
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <div class="cards">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-music fa-3x head-icon"></i></div>
+                <div class="cards-body text-center">
+                    <h3 class="cards-title pt-1">Live Music</h3>
+                    <p class="cards-text text-sm">Immerse yourself in the rhythm of unforgettable nights. From electrifying concerts to soulful performances, our platform is your ticket to live music experiences that resonate with your soul</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+          <div class="cards">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-moon-o fa-3x head-icon"></i></div>
+                <div class="cards-body text-center">
+                    <h3 class="cards-title pt-1">Nightlife and Entertainment</h3>
+                    <p class="cards-text text-sm">Dive into the city's heartbeat. Explore curated nightlife experiences, from pulsating club nights to exclusive events, making every night an adventure worth remembering.</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+          <div class="cards">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-microphone fa-3x head-icon"></i></div>
+                <div class="cards-body text-center">
+                    <h3 class="cards-title pt-1"> Concert and Music Festival </h3>
+                    <p class="cards-text text-sm">Get ready to be swept away by the magic of live performances. Dive into a world of electrifying concerts and music festivals where every beat is a celebration of sound.</p>
+                </div>
+              </div>
+        </div>
+        <br>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+          <div class="cards">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-cutlery fa-3x head-icon"></i></div>
+                <div class="cards-body text-center">
+                    <h3 class="cards-title pt-1">Food and Culinary</h3>
+                    <p class="cards-text text-sm">Savor the extraordinary. Indulge in culinary wonders, from food festivals to intimate dining affairs. Discover a world where taste takes center stage and every bite tells a delicious story. Connect with local chefs, tastemakers, and gastronomic delights.
+                    </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+          <div class="cards">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-video-camera fa-3x head-icon"></i></div>
+                <div class="cards-body text-center">
+                    <h3 class="cards-title pt-1">Live Streaming and Virtual Experiences</h3>
+                    <p class="cards-text text-sm">Experience the extraordinary from the comfort of your own space. Join us in the digital realm for live streaming and virtual experiences, bringing the excitement of events directly to you. </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-30 pb-5">
+            <div class="cards">
+                <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><i class="fa fa-camera-retro fa-3x head-icon"></i></div>
+                <div class="cards-body text-center">
+                    <h3 class="cards-title pt-1">City Tour</h3>
+                    <p class="cards-text text-sm">Embark on a journey of discovery through our curated city tours. Uncover the hidden gems, vibrant culture, and pulsating energy that make each city unique, creating memories that resonate with the rhythm of urban life.</p>
+                </div>
+              </div>
+        </div>
+    </div>
+  </section>
+  </div>
+  <!-- servcies ends-->
+  
+  <!--About us -->
+  <div class ="b1">
+  <section class="container">
+    <h1 style ="color:#fff;">About Us</h1>
+      <div class="row">
+        <section class="py-5">
+          <div class="container">
+            <div class="row align-items-center gx-4">
+              <div class="col-md-5">
+                <div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="../images/bg2.jpg"></div>
+              </div>
+              <div class="col-md-6 offset-md-1">
+                <div class="ms-md-2 ms-lg-5" style ="color:#fff; text-align:justify">
+                  <span class="text-muted">Our Story</span>
+                  <h2 class="display-5 fw-bold">About Us</h2>
+                  <p class="lead">Embark on a vibrant journey with our specialized services designed to bring music, food, concerts, and nightlife enthusiasts together for unforgettable experiences.</p>
+                  <p class="lead mb-0">LExplore the boundless possibilities within the realms of music, food, concerts, and nightlife with our dedicated suite of services, making every event an extraordinary celebration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    </div>
+  <!-- events end here-->
 
 <%- include partials/footer.ejs %>

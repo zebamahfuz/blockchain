@@ -1,33 +1,78 @@
 <%- include partials/header.ejs %>
 
-<!DOCTYPE html>
-        <html>
-           <head>
-              <title>OSM and Leaflet</title>
+
               <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-           </head><body>
-              <div id = "map" style = "width: 900px; height: 580px"></div><script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-              <script>
-                 // Creating map options
-                 var mapOptions = {
-                    center: [17.385044, 78.486671],
-                    zoom: 10
-                 }
-                 
-                 // Creating a map object
-                 var map = new L.map('map', mapOptions);
-                 
-                 // Creating a Layer object
-                 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-                 
-                 // Adding layer to the map
-                 map.addLayer(layer);
-              </script>
-           </body>
-           
-        </html>
+             
+              
+          
+<!-- new contact us page-->
 
+	<div class="container">
+		<div class="innerwrap">
+		
+			<section class="section1 clearfix">
+				<div class="textcenter">
+					<span class="seperator"></span>
+					<h1>Drop Us a Mail</h1>
+				</div>
+			</section>
+		
+			<section class="section2 clearfix">
+				<div class="col2 column1 first">
+               <section class="container ">
+                  <div id = "map" style = "width: 100%; height: 600px"></div><script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				</div>
+				<div class="col2 column2 last">
+					<div class="sec2innercont">
+						<div class="sec2addr">
+							<p>45 BC, a Latin professor at Hampden-Sydney College in Virginia</p>
+							<p><span class="collig">Phone :</span> +353 97688xxx</p>
+							<p><span class="collig">Email :</span> infiniteevents@gmail.com</p>
+							<p><span class="collig">Fax :</span> +353 9768850xxx</p>
+						</div>
+					</div>
+					<div class="sec2contactform">
+						<h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
+						<form action="">
+							<div class="clearfix">
+								<input class="col2 first" type="text" placeholder="FirstName">
+								<input class="col2 last" type="text" placeholder="LastName">
+							</div>
+							<div class="clearfix">
+								<input  class="col2 first" type="Email" placeholder="Email">
+								<input class="col2 last" type="text" placeholder="Contact Number">
+							</div>
+							<div class="clearfix">
+								<textarea name="textarea" id="" cols="30" rows="7">Your message here...</textarea>
+							</div>
+							<div class="clearfix"><input type="submit" value="Send"></div>
+						</form>
+					</div>
 
+				</div>
+			</section>
+		
+		</div>
+	</div>
+   <script>
+      // Creating map options
+      var mapOptions = {
+         center: [17.385044, 78.486671],
+         zoom: 10
+      }
+      
+      // Creating a map object
+      var map = new L.map('map', mapOptions);
+      
+      // Creating a Layer object
+      var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+      
+      // Adding layer to the map
+      map.addLayer(layer);
+   </script>
+<!-- ends here-->
+
+              <%- include partials/footer.ejs %>
 
 
         

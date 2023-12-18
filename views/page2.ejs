@@ -7,13 +7,23 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
     
 </head>
+<style>
+    .jumbotron {
+        border-radius: 0rem !important;
+    }
+        p {
+            color: #fff;
+        }
+    
+</style>
 <body>
-    <div id="readArea" > <!-- READING FROM CONTRACT -->
+    <div class="jumbotron"  style = "background-image: linear-gradient(0deg, rgba(255 255 255 / 54%), rgba(0 0 0 / 69%)), url('../images/bg1.jpg'); background-repeat: no-repeat; background-size: cover; ">
+   <center> <div id="readArea" > <!-- READING FROM CONTRACT -->
         <button class="btn btn-indigo" onclick="connectMetamask()">CONNECT TO METAMASK</button>
-        <p id="userArea">Status: Not connected to Metamask</p>
+        <p id="userArea" >Status: Not connected to Metamask</p>
         <!-- index html to meta-->
-   
-        <button class="btn btn-connect2" style="margin-left: 300px;" onclick="connectContract()">CONNECT TO CONTRACT</button>
+        <div class="container" >
+        <button class="btn btn-connect2"  onclick="connectContract()">CONNECT TO CONTRACT</button>
         <p id="contractArea">Status: Not connected to Contract</p>
         <!-- meta to SC -->
    
@@ -25,21 +35,21 @@
         <p id="balanceArea">Balance: Not Connected to Contract</p>
         <!-- CAlling the function designed in Transactions.sol get balance -->
    
-   
-    </div>
+   </div>
+    </div> 
    
     <div id="writeArea"><!-- WRITING TO CONTRACT -->
-        <button class="btn btn-connect3" onclick="depositContract()">Send ether to the Contract</button><br>
+        <button class="btn btn-connect3" onclick="depositContract()">Send ether to the Contract</button><br> &nbsp;
         <input type="number" id="depositInput" placeholder="Enter Amount"><br> <br>
         <!-- Deposit to contract calling on deposit function -->
    
-        <button class="btn btn-indigo" onclick="withdraw()" style="margin-top: 30px; margin-left: 350px;">WITHDRAW ETHER TO ANY ADDRESS</button> <br>
+        <button class="btn btn-indigo" onclick="withdraw()">WITHDRAW ETHER TO ANY ADDRESS</button> <br>
         <input type="text" id="addressInput" placeholder="Enter Address"> <br>
         <input type="number" id="amountInput" placeholder="Enter Amount">
         <!-- CAlling the function designed in Transactions.sol -->
         <!-- calling the withdraw function -->
     </div>
-   
+   </div> </center>
     <script> // the below script code is convention in web3 in forming the communication with Web
  
         let account;
@@ -136,3 +146,4 @@
  
 </body>
 </html>
+<%- include partials/footer.ejs %>
